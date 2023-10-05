@@ -1,0 +1,23 @@
+@using CRUDelicious.Models
+@model List<Dishe>
+
+<header>
+    <h1>Welcome to CRUDelicious</h1>
+</header>
+<nav>
+    <a>Home</a>
+    <a asp-action="New" asp-controller="Delicious">Add a Dish</a>
+</nav>
+
+<div class="disheList">
+    <p>Check out some recent dishes</p>
+    @{
+        foreach (var result in Model)
+        {
+            <div class="dishe">
+                <a asp-action="Show" asp-controller="Delicious" asp-route-DishId="@result.DishId">@result.Name </a>
+                <p> by @result.Chef</p>
+            </div>
+        }
+    }
+</div>

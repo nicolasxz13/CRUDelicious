@@ -1,0 +1,26 @@
+@using CRUDelicious.Models
+@model Dishe
+<header>
+    <h1>@Model.Name</h1>
+</header>
+
+<nav>
+    <a asp-action="Index" asp-controller="Delicious">Home</a>
+    <a asp-action="New" asp-controller="Delicious">Add a Dish</a>
+</nav>
+
+<div class="showDishe">
+    <p>@Model.Name by @Model.Chef</p>
+    <p>@Model.Description</p>
+    <p>Calories : @Model.Calories</p>
+    <p>Tastiness : @Model.Tastiness</p>
+</div>
+
+<div class="options">
+    <form asp-action="Destroy" asp-controller="Delicious" asp-route-DishId="@Model.DishId">
+        <button type="submit" class="btn1 btnDelete">Delete</button>
+    </form>
+    <form asp-action="Edit" asp-controller="Delicious" asp-route-DishId="@Model.DishId" method="get">
+        <button type="submit" class="btn1 btnEdit">Edit</button>
+    </form>
+</div>

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25em;
+    margin-right: 25em;
+    margin-top: 1em;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 900;
+    letter-spacing: 0.128em;
+    font-size: 3em;
+}
+
+
+nav {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+.disheList {
+    font-size: 1.5em;
+    margin-top: 2em;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.disheList> :first-child {
+    border-bottom: 1px solid black;
+}
+
+.dishe {
+    margin-top: 1em;
+    display: flex;
+}
+
+.dishe p {
+    margin-left: 5px;
+}
+
+.showDishe {
+    margin-top: 1em;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.showDishe> :first-child {
+    border-bottom: 1px solid black;
+}
+
+.showDishe>* {
+    margin-top: 0.5em;
+}
+
+.options {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formdish {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blocks {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blockinputs {
+    display: flex;
+    flex-direction: column;
+}
+.blockinputs span{
+    color:red;
+}
+.select{
+    width: 8em;
+    text-align: center;
+}
+.blockinputs>* {
+    margin-top: 0.5em;
+}
+
+.btn1 {
+    height: 3.5em;
+    width: 9em;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
+    background-color: white;
+    color: black;
+}
+
+.btn1:active {
+    /* X, Y, blur, color*/
+    box-shadow: 2px 2px 2px black;
+    transform: translateZ(5px);
+    align-items: center;
+}
+
+.btnDelete {
+    background-color: #ea9999;
+}
+
+.btnEdit {
+    background-color: #9fc5f8;
+}
+
+.btn {
+    background-color: #fdfdfd;
+    margin-left: auto;
+}
